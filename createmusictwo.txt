@@ -1,0 +1,1382 @@
+<style>
+    .modal-footer {
+        display: none;
+    }
+
+    .bgchn {
+        cursor: pointer;
+    }
+
+    .owl-buttons {
+        display: none;
+    }
+
+    .owl-carousel:hover .owl-buttons {
+        display: block;
+    }
+
+    .owl-item {
+        text-align: center;
+    }
+
+    .owl-nav {
+        display: none !important;
+    }
+
+    .owl-theme .owl-controls .owl-buttons div {
+        background: transparent;
+        color: #869791;
+        font-size: 40px;
+        line-height: 300px;
+        margin: 0;
+        padding: 0 60px;
+        position: absolute;
+        top: 0;
+    }
+
+    .owl-theme .owl-controls .owl-buttons .owl-prev {
+        left: 0;
+        padding-left: 20px;
+    }
+
+    .owl-theme .owl-controls .owl-buttons .owl-next {
+        right: 0;
+        padding-right: 20px;
+    }
+
+    .owl-item {
+        width: auto !important;
+    }
+
+    .carousel-indicators [data-bs-target] {
+        background-color: black !important;
+    }
+
+    .owl-dots {
+        display: none !important;
+    }
+
+    .modal-content {
+        scrollbar-width: none;
+    }
+
+    .btn-close {
+        position: fixed !important;
+        right: -10px !important;
+        top: 50px !important;
+    }
+
+    .modal-content {
+        /*overflow:scroll !important;*/
+    }
+
+    .dropify-wrapper .dropify-message span.file-icon {
+        width: 100% !important;
+    }
+
+    .modal-content {
+        padding: 20px !important;
+    }
+
+    .dropify-message .file-icon p {
+        font-size: 24px !important;
+    }
+    .color-selector {
+        background-color: #eaeaea;
+        border-radius: 0px 0px 5px 5px;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .color-option {
+        height: 35px;
+        width: 35px;
+        border-radius: 100%;
+        cursor: pointer;
+    }
+
+    .selected {
+        border: 2px solid #000; /* You can customize this border as you wish */
+    }
+    #sharevideo{
+          justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+     #shareimage{
+          justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+    
+    .modal-content{
+        padding:0px !important;
+    }
+    .modal-body{
+           padding:0px !important;
+    }
+    .customborderradiustopleft .dropify-wrapper {
+            border-radius:15px 0px 0px 0px;
+
+    }
+    .customborderradiustopright .dropify-wrapper{
+           border-radius:0px 15px 0px 0px;
+    }
+    
+/*    .dropify-wrapper{*/
+/*        border-radius:15px !important;*/
+/*    }*/
+  
+/*.dropify-preview{*/
+/*padding:0px !important;*/
+/*}*/
+.dropify-wrapper{
+    border:none !important;
+}
+/*.dropify-wrapper:hover{*/
+/*    border-radius:15px !important;*/
+/*}*/
+.modal-content{
+    border-radius:15px;
+}
+      .upload-btn {
+      position: absolute;
+      top: 2px;
+      right: 13px;
+      padding: 6px;
+      z-index: 99999;
+    }
+</style>
+
+<div id="shahretext" class="share-content">
+    <div style="padding:0px 2.75rem;">
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+        <div style="margin-bottom:-24px !important;" class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div style="background-image:url('{{asset('assets/img/hand.png')}}');height: 240px; width: 119%;margin-top:-28px;margin-left:-44px; background-size: 100% 100%;background-repeat: no-repeat;" class="carousel-inner">
+            <div class="carousel-item active">
+                <h2 style="font-size:28px;color:whitesmoke;margin-top:20px;text-align:center;" class="">User Text Will be then <br> showed here</h2>
+                <!--<img src="{{asset('assets/img/hand.png')}}" class="d-block w-100" alt="...">-->
+            </div>
+            <div   class="carousel-item">
+                <h2 style="font-size:28px;color:whitesmoke;margin-top:20px;text-align:center;" class="">User Text Will be then <br> showed here</h2>
+                <!--<img src="{{asset('assets/img/hand.png')}}" class="d-block w-100" alt="...">-->
+            </div>
+            <div class="carousel-item">
+                <h2 style="font-size:28px;color:whitesmoke;margin-top:20px;text-align:center;" class="">User Text Will be then <br> showed here</h2>
+                <!--<img src="{{asset('assets/img/hand.png')}}" class="d-block w-100" alt="...">-->
+            </div>
+        </div>
+        <!--<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">-->
+        <!--  <span class="carousel-control-prev-icon" aria-hidden="true"></span>-->
+        <!--  <span class="visually-hidden">Previous</span>-->
+        <!--</button>-->
+        <!--<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">-->
+        <!--  <span class="carousel-control-next-icon" aria-hidden="true"></span>-->
+        <!--  <span class="visually-hidden">Next</span>-->
+        <!--</button>-->
+    </div>
+    </div>
+    
+     <div style="padding:0px 2.75rem;">
+    <div style="border-radius:5px 5px 5px 5px;" class="d-flex justify-content-start mt-5 ">
+
+        <div style="width:-webkit-fill-available;" class="">
+            <div style="width:-webkit-fill-available;" class="btn-group" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-label-secondary btn btn-outline-secondary">All User</button>
+                <button type="button" class="btn btn-label-secondary btn btn-outline-secondary">Standart</button>
+                <button type="button" class="btn btn-label-secondary  btn btn-outline-secondary">Premium</button>
+                <button type="button" class="btn btn-label-secondary  btn btn-outline-secondary">Vip</button>
+                <!--<button type="button" class="btn btn-label-secondary  btn btn-outline-secondary"> <i class="fa fa-send-o" style="font-size:20px;color:#59d068"></i></button>-->
+            </div>
+        </div>
+        <div style="margin-left:10px;" class="d-flex justify-content-center align-items-center btn btn-outline-secondary">
+            <i class="fa fa-send-o" style="font-size:20px;color:#59d068"></i>
+        </div>
+    </div>
+</div>
+
+    <!--add-->
+    <hr style="    width: 131px;
+    margin: auto;margin-top:20px;">
+    
+     <div style="padding:0px 2.75rem;">
+    <div style="background: #eaeaea;border-radius:5px 5px 0px 0px;" class="d-flex mt-3">
+        <div class="d-flex justify-content-center align-items-center mt-3"> <i style="font-size:4px;color:gray" class="fa fa-circle p-1"></i>
+            <label>Select Feed Background</label>
+            <i style="font-size:4px;color:gray" class="fa fa-circle p-1"></i>
+        </div>
+    </div>
+
+    <div style="padding:10px !important;background-color:#eaeaea;border-radius:0px 0px 5px 5px;" id="owl-example" class="owl-carousel ">
+        <div><img class="clickborder" style="height:55px;width:82px;padding: 0px 12px;" src="{{asset('assets/img/party.jpg')}}" alt=""></div>
+        <div><img class="clickborder" style="height:55px;width:82px;padding: 0px 12px;" src="{{asset('assets/img/party.jpg')}}" alt=""></div>
+        <div><img class="clickborder" style="height:55px;width:82px;padding: 0px 12px;" src="{{asset('assets/img/party.jpg')}}" alt=""></div>
+        <div><img class="clickborder" style="height:55px;width:82px;padding: 0px 12px;" src="{{asset('assets/img/party.jpg')}}" alt=""></div>
+        <div><img class="clickborder" style="height:55px;width:82px;padding: 0px 12px;" src="{{asset('assets/img/party.jpg')}}" alt=""></div>
+        <div><img class="clickborder" style="height:55px;width:82px;padding: 0px 12px;" src="{{asset('assets/img/party.jpg')}}" alt=""></div>
+
+        <div><img class="clickborder" style="height:55px;width:82px;padding: 0px 12px;" src="{{asset('assets/img/party.jpg')}}" alt=""></div>
+        <div><img class="clickborder" style="height:55px;width:82px;padding: 0px 12px;" src="{{asset('assets/img/party.jpg')}}" alt=""></div>
+        <div><img class="clickborder" style="height:55px;width:82px;padding: 0px 12px;" src="{{asset('assets/img/party.jpg')}}" alt=""></div>
+    </div>
+    <hr style="    width: 131px;
+    margin: auto;margin-top:20px;">
+    <div style="background: #eaeaea;border-radius:5px 5px 0px 0px;" class="d-flex  align-items-center pt-3 mt-3"> <i style="font-size:4px;color:gray" class="fa fa-circle p-1"></i>
+        <label>Select Font Color</label>
+        <i style="font-size:4px;color:gray" class="fa fa-circle p-1"></i>
+    </div>
+    
+    <!--add color select-->
+   <div class="color-selector">
+    <div class="color-option" style="background:black"></div>
+    <div class="color-option" style="background:pink"></div>
+    <div class="color-option" style="background:blue"></div>
+    <div class="color-option" style="background:green"></div>
+    <div class="color-option" style="background:white"></div>
+    <div class="color-option" style="background:red"></div>
+    <div class="color-option" style="background:skyblue"></div>
+</div>
+</div>
+
+    <!-- <hr style="    width: 131px;-->
+    <!--margin: auto;margin-top:20px">-->
+
+    <!--ad-->
+
+
+
+
+    <hr style="width: 131px;
+  margin: auto;margin-top:20px;">
+  
+   <div style="padding:0px 2.75rem;">
+    <div style="background: #eaeaea;border-radius:5px 5px 0px 0px;" class="d-flex mt-3  ">
+        <input style="height: 90px;" type="text" class="form-control w-100" placeholder="Enter The description">
+    </div>
+    </div>
+
+
+    <!--</div>-->
+</div>
+
+<div id="shahreimage" class="share-content">
+    
+    
+    <div class="shareimage">
+        <div style="margin-top:-28px;" id="image11" class="image-content1  ">
+            <!--<div  style="background-image:url('{{asset('assets/img/jamunda.png')}}');height: 350px; width: 100%; background-size: 100% 100%;background-repeat: no-repeat;" class="carousel-inner">-->
+            <div  class="w-100">
+                <input style="border-radius:20px;" name="file1" type="file" class="dropify" data-height="250" data-default-file="{{asset('assets/img/banner.jpg')}}" />
+            </div>
+            
+             <div style="padding:0px 2.75rem;">
+            
+            <div style="border-radius:5px 5px 5px 5px;" class="d-flex justify-content-start mt-5 ">
+
+        <div style="width:-webkit-fill-available;" class="">
+            <div style="width:-webkit-fill-available;" class="btn-group" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-label-secondary btn btn-outline-secondary">All User</button>
+                <button type="button" class="btn btn-label-secondary btn btn-outline-secondary">Standart</button>
+                <button type="button" class="btn btn-label-secondary  btn btn-outline-secondary">Premium</button>
+                <button type="button" class="btn btn-label-secondary  btn btn-outline-secondary">Vip</button>
+                <!--<button type="button" class="btn btn-label-secondary  btn btn-outline-secondary"> <i class="fa fa-send-o" style="font-size:20px;color:#59d068"></i></button>-->
+            </div>
+        </div>
+
+
+
+
+        <div style="margin-left:10px;" class="d-flex justify-content-center align-items-center btn btn-outline-secondary">
+            <i class="fa fa-send-o" style="font-size:20px;color:#59d068"></i>
+        </div>
+    </div>
+         </div>    
+        </div>
+        <!--image 1 end-->
+
+        <div style="margin-top:-28px;width:105%;"  id="image22" class="col-sm-12 image-content1 row  justify-content-around  justify-content-center" >
+            <!--2 image 1st tab-->
+           <div class="row image-changecontent p-0" id="imagechangeone1" >
+            <div  style="padding-right:0px;"  class="col-sm-6 customborderradiustopleft" >
+                <input name="file1" type="file" class="dropify" data-height="150" data-default-file="{{asset('assets/img/banner.jpg')}}" />
+                <!-- <div  style="background-image:url('{{asset('assets/img/jamunda.png')}}');height: 250px; width: 100%; background-size: 100% 100%;background-repeat: no-repeat;" class="carousel-inner">-->
+                <!--</div>-->
+
+            </div>
+            <div  style="padding-left:0px;"  class="col-sm-6 customborderradiustopright">
+                <input name="file1" type="file" class="dropify" data-height="150" data-default-file="{{asset('assets/img/banner.jpg')}}" />
+                <!--<div  style="background-image:url('{{asset('assets/img/jamunda.png')}}');height: 250px; width: 100%; background-size: 100% 100%;background-repeat: no-repeat;" class="carousel-inner">-->
+                <!--</div>-->
+            </div>
+         </div>
+          <!--2 image 1st tab-->
+         <!--2 image second tab-->
+          <div class="row image-changecontent p-0" id="imagechangeone2" >
+            
+            <div class="col-sm-12">
+                <input name="file1" type="file" class="dropify" data-height="100" data-default-file="{{asset('assets/img/banner2.jpg')}}" />
+                <!--<div  style="background-image:url('{{asset('assets/img/jamunda.png')}}');height: 250px; width: 100%; background-size: 100% 100%;background-repeat: no-repeat;" class="carousel-inner">-->
+                <!--</div>-->
+            </div>
+              <div class="col-sm-12">
+                <input name="file1" type="file" class="dropify" data-height="100" data-default-file="{{asset('assets/img/banner2.jpg')}}" />
+                <!--<div  style="background-image:url('{{asset('assets/img/jamunda.png')}}');height: 250px; width: 100%; background-size: 100% 100%;background-repeat: no-repeat;" class="carousel-inner">-->
+                <!--</div>-->
+            </div>
+         </div>
+         
+         <!--2 image second tab-->
+         
+           
+  <!--line here-->
+  
+  <!--      <hr style="width: 131px;-->
+  <!--margin: auto;margin-top:20px;">-->
+   <div style="padding:0px 2.75rem;">
+   <div style="border-radius:5px 5px 5px 5px;" class="d-flex justify-content-start mt-5 ">
+
+        <div style="width:-webkit-fill-available;" class="">
+            <div style="width:-webkit-fill-available;" class="btn-group" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-label-secondary btn btn-outline-secondary">All User</button>
+                <button type="button" class="btn btn-label-secondary btn btn-outline-secondary">Standart</button>
+                <button type="button" class="btn btn-label-secondary  btn btn-outline-secondary">Premium</button>
+                <button type="button" class="btn btn-label-secondary  btn btn-outline-secondary">Vip</button>
+                <!--<button type="button" class="btn btn-label-secondary  btn btn-outline-secondary"> <i class="fa fa-send-o" style="font-size:20px;color:#59d068"></i></button>-->
+            </div>
+        </div>
+
+
+
+
+        <div style="margin-left:10px;" class="d-flex justify-content-center align-items-center btn btn-outline-secondary">
+            <i class="fa fa-send-o" style="font-size:20px;color:#59d068"></i>
+        </div>
+    </div>
+  </div>
+
+<hr style="width: 131px;
+  margin: auto;margin-top:20px;">
+            <!--<div class="d-flex justify-content-around align-items-center">-->
+            <!--     <h6 style="text-align:center;">None</h6>     -->
+            <!--      <h6 style="text-align:center;">Modern</h6>     -->
+            <!--  <h6 style="text-align:start;">Elegant</h6>     -->
+
+            <!--</div> -->
+ <div style="padding:0px 2.75rem;">
+            <div style="margin-left:5px;margin-top:20px;" class="row pick-content d-flex justify-content-around">
+
+               
+            
+               
+
+                <!--<h6 style="text-align:center;">Modern</h6>-->
+                <div style="width:33.3%"  class="carousel-inner " >
+                    <h6 style="text-align:center;">Modern</h6>
+                    <!--<div style="background-image:url('{{asset('assets/img/thanks3.png')}}');height: 80px; width: 80px; background-size: 100% 100%;background-repeat: no-repeat;margin:auto;border:2px solid #80e492;" class="carousel-inner brchg imagepicker tabbactiveclick" data-imagetwo="#image22">-->
+                    <!--</div>-->
+                      <object style="height:80px;width:80px;margin:auto;display:flex;" data="{{asset('assets/img/thanks3.png')}}" data-original="{{asset('assets/img/thanks3.png')}}" data-default="{{asset('assets/img/colorimage.PNG')}}" width="80" height="80" class="carousel-inner  imagechangeclass" data-imagechange="#imagechangeone1"></object>
+
+                </div>
+
+
+                <!--<h6 style="text-align:center;">Elegant</h6>-->
+                <div style="width:33.3%" class="carousel-inner  " >
+                    <h6 style="text-align:center;">Elegant</h6>
+                  
+                     <object style="height:80px;width:80px;margin:auto;display:flex;" data="{{asset('assets/img/thanks2.png')}}" data-original="{{asset('assets/img/thanks2.png')}}" data-default="{{asset('assets/img/thanks2 (1).png')}}" width="80" height="80" class="carousel-inner   imagechange2 imagechangeclass"  data-imagechange="#imagechangeone2"></object>
+
+                </div>
+            </div>
+        </div>
+         </div>
+    
+            <!--3 image new-->
+                   <div style="margin-top:-28px;margin-left:-1px;" style="display:contents;" id="image33" class="col-sm-12 image-content1 row ">
+                       
+                        <!--3 image 1st tab-->
+                 <div  class="col-sm-12 image-changecontent2" id="imagechangetwo1">
+                        <div style="padding:0px;width:105%;margin-left:-12px;" class="col-sm-12 ">
+                <input name="file1" type="file" class="dropify" data-height="100" data-default-file="{{asset('assets/img/banner2.jpg')}}" />
+                <!-- <div  style="background-image:url('{{asset('assets/img/jamunda.png')}}');height: 250px; width: 100%; background-size: 100% 100%;background-repeat: no-repeat;" class="carousel-inner">-->
+                </div>
+            
+            <div class="row">
+               <div style="padding:0px;" class="col-sm-6 ">
+                <input name="file1" type="file" class="dropify" data-height="90" data-default-file="{{asset('assets/img/banner2.jpg')}}" />
+                <!-- <div  style="background-image:url('{{asset('assets/img/jamunda.png')}}');height: 250px; width: 100%; background-size: 100% 100%;background-repeat: no-repeat;" class="carousel-inner">-->
+                <!--</div>-->
+            </div>
+            <div style="padding:0px;" class="col-sm-6 ">
+                <input name="file1" type="file" class="dropify" data-height="90" data-default-file="{{asset('assets/img/banner2.jpg')}}" />
+                <!-- <div  style="background-image:url('{{asset('assets/img/jamunda.png')}}');height: 250px; width: 100%; background-size: 100% 100%;background-repeat: no-repeat;" class="carousel-inner">-->
+                <!--</div>-->
+            </div>
+            </div>
+            </div>
+              <!--3 image 1st tab-->
+              
+              
+                <!--3 image 2nd tab-->
+                
+                    <div style="padding:0px;" class="col-sm-12 image-changecontent2" id="imagechangetwo2">
+                        <div style="padding:0px;" class="col-sm-12 ">
+                <!-- <div  style="background-image:url('{{asset('assets/img/jamunda.png')}}');height: 250px; width: 100%; background-size: 100% 100%;background-repeat: no-repeat;" class="carousel-inner">-->
+                            <div class="row">
+                                <div  class="col-sm-8">
+                <input name="file1" type="file" class="dropify" data-height="170" data-default-file="{{asset('assets/img/banner.jpg')}}" />
+                                </div>
+                                 <div  style="padding:0px;margin-left:-12px;" class="col-sm-4">
+                                    <div class="col-sm-12">
+                                            <input name="file1" type="file" class="dropify" data-height="80" data-default-file="{{asset('assets/img/banner.jpg')}}" />
+                                    </div>
+                                     <div class="col-sm-12">
+                                              <input name="file1" type="file" class="dropify" data-height="80" data-default-file="{{asset('assets/img/banner.jpg')}}" />
+                                     </div>
+            
+                                </div>
+                            </div>
+                </div>
+          
+            </div>
+                     <!--3 image 2nd tab-->
+                      <div style="padding:0px 2.75rem;">
+               <div style="border-radius:5px 5px 5px 5px;" class="d-flex justify-content-start mt-5 ">
+
+        <div style="width:-webkit-fill-available;" class="">
+            <div style="width:-webkit-fill-available;" class="btn-group" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-label-secondary btn btn-outline-secondary">All User</button>
+                <button type="button" class="btn btn-label-secondary btn btn-outline-secondary">Standart</button>
+                <button type="button" class="btn btn-label-secondary  btn btn-outline-secondary">Premium</button>
+                <button type="button" class="btn btn-label-secondary  btn btn-outline-secondary">Vip</button>
+                <!--<button type="button" class="btn btn-label-secondary  btn btn-outline-secondary"> <i class="fa fa-send-o" style="font-size:20px;color:#59d068"></i></button>-->
+            </div>
+        </div>
+
+
+
+
+
+        <div style="margin-left:10px;" class="d-flex justify-content-center align-items-center btn btn-outline-secondary">
+            <i class="fa fa-send-o" style="font-size:20px;color:#59d068"></i>
+        </div>
+    </div>
+     </div>
+          
+            <div>
+                <!--<hr style="width: 131px;-->
+                <!--  margin: auto;margin-top:20px;">-->
+
+                <!--        <div class="d-flex justify-content-around align-items-center">-->
+                <!--             <h6 style="text-align:center;">None</h6>     -->
+                <!--              <h6 style="text-align:center;">Modern</h6>     -->
+                <!--          <h6 style="text-align:start;">Elegant</h6>     -->
+
+                <!--        </div> -->
+
+                <!--        <div style="margin-left:5px" class="row pick-content d-flex justify-content-around">-->
+
+                <!--<h6 style="text-align:center;">None</h6>     -->
+                <!--  <div style="background-image:url('{{asset('assets/img/thanks1.png')}}');height: 80px; width: 80px; background-size: 100% 100%;background-repeat: no-repeat;" class="carousel-inner brchg imagepicker" data-imagetwo="#image11">-->
+                <!--  </div>-->
+
+
+
+                <!--<h6 style="text-align:center;">Modern</h6>-->
+                <!--     <div style="background-image:url('{{asset('assets/img/thanks3.png')}}');height: 80px; width: 80px; background-size: 100% 100%;background-repeat: no-repeat;" class="carousel-inner brchg imagepicker" data-imagetwo="#image22">-->
+                <!--  </div>-->
+
+
+
+                <!--<h6 style="text-align:center;">Elegant</h6>-->
+                <!--   <div style="background-image:url('{{asset('assets/img/dashes.png')}}');height: 80px; width:  80px; background-size: 100% 100%;background-repeat: no-repeat;" class="carousel-inner brchg imagepicker" data-imagetwo="#image33">-->
+                <!--  </div>-->
+
+                <!--</div>-->
+                <hr style="width: 131px;
+  margin: auto;margin-top:20px;">
+
+              <div style="padding:0px 2.75rem;">
+                <div style="margin-left:5px;margin-top:20px;" class="row pick-content d-flex justify-content-around">
+
+                  
+
+                    <!--<h6 style="text-align:center;">Modern</h6>-->
+                    <div style="width:33.3%" class="carousel-inner brchg imagepicker " data-imagetwo="#image22">
+                        <h6 style="text-align:center;">Modern</h6>
+                     
+                         <object style="height:80px;width:80px;margin:auto;display:flex;" data="{{asset('assets/img/three3.png')}}"  data-original2="{{asset('assets/img/three3.png')}}"  data-default2="{{asset('assets/img/threedef1.png')}}" width="80" height="80" class="carousel-inner  imagechangetwo2" data-imagechangetwo="#imagechangetwo1"></object>
+                    </div>
+
+
+                    <!--<h6 style="text-align:center;">Elegant</h6>-->
+                    <div style="width:33.3%"  class="carousel-inner brchg imagepicker " data-imagetwo="#image33">
+                        <h6 style="text-align:center;">Elegant</h6>
+                        <!--<div style="background-image:url('{{asset('assets/img/dashes.png')}}');height: 80px; width:  80px; background-size: 100% 100%;background-repeat: no-repeat;margin:auto;border:2px solid #80e492;" class="carousel-inner brchg imagepicker tabbactiveclick" data-imagetwo="#image33">-->
+                        <!--</div>-->
+                         <object style="height:80px;width:80px;margin:auto;display:flex;" data="{{asset('assets/img/three3(2).png')}}" data-original2="{{asset('assets/img/three3(2).png')}}" data-default2="{{asset('assets/img/threedef2.png')}}" width="80" height="80" class="carousel-inner imagechangetwo2" data-imagechangetwo="#imagechangetwo2"  ></object>
+
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <div style="display:contents;" id="image44" class="col-sm-12 image-content1 row  ">
+              <!--four tab 1-->
+              <div style="margin-top:-28px;padding:0px" class="imagecontentfour" id="imagecontentfour1">
+            <div class="d-flex flex-wrap ">
+            <div style="padding:0px;width:50%" >
+                <input name="file1" type="file" class="dropify" data-height="80" data-default-file="{{asset('assets/img/banner2.jpg')}}" />
+                <!-- <div  style="background-image:url('{{asset('assets/img/jamunda.png')}}');height: 250px; width: 100%; background-size: 100% 100%;background-repeat: no-repeat;" class="carousel-inner">-->
+                <!--</div>-->
+            </div>
+            <div style="padding:0px;width:50%">
+                <input name="file1" type="file" class="dropify" data-height="120" data-default-file="{{asset('assets/img/banner.jpg')}}" />
+                <!-- <div  style="background-image:url('{{asset('assets/img/jamunda.png')}}');height: 250px; width: 100%; background-size: 100% 100%;background-repeat: no-repeat;" class="carousel-inner">-->
+                <!--</div>-->
+            </div>
+            <div style="width:50%;padding:0px;margin-top:-41px;">
+                <input name="file1" type="file" class="dropify" data-height="120" data-default-file="{{asset('assets/img/banner.jpg')}}" />
+                <!-- <div  style="background-image:url('{{asset('assets/img/jamunda.png')}}');height: 250px; width: 100%; background-size: 100% 100%;background-repeat: no-repeat;" class="carousel-inner">-->
+                <!--</div>-->
+            </div>
+            <div style="width:50%;padding:0px;margin-top:0px;">
+                <input name="file1" type="file" class="dropify" data-height="80" data-default-file="{{asset('assets/img/banner2.jpg')}}" />
+                <!--<div  style="background-image:url('{{asset('assets/img/jamunda.png')}}');height: 250px; width: 100%; background-size: 100% 100%;background-repeat: no-repeat;" class="carousel-inner">-->
+                <!--</div>-->
+            </div>
+            
+            </div>
+            </div>
+              <!--four tab 1-->
+            
+            <!--four tab 2-->
+             <div style="margin-top:-38px;padding:0px" class="imagecontentfour" id="imagecontentfour2">
+               <div style="padding:10px;" class="col-sm-12 ">
+                <!-- <div  style="background-image:url('{{asset('assets/img/jamunda.png')}}');height: 250px; width: 100%; background-size: 100% 100%;background-repeat: no-repeat;" class="carousel-inner">-->
+                            <div class="row">
+                                <div style="padding:0px;" class="col-sm-8">
+                <input name="file1" type="file" class="dropify" data-height="175" data-default-file="{{asset('assets/img/banner.jpg')}}" />
+                                </div>
+                                 <div style="padding:0px;" class="col-sm-4">
+                                    <div class="col-sm-12">
+                                            <input name="file1" type="file" class="dropify" data-height="50" data-default-file="{{asset('assets/img/banner.jpg')}}" />
+                                    </div>
+                                     <div class="col-sm-12">
+                                              <input name="file1" type="file" class="dropify" data-height="50" data-default-file="{{asset('assets/img/banner.jpg')}}" />
+                                     </div>
+                                      <div class="col-sm-12">
+                                              <input name="file1" type="file" class="dropify" data-height="50" data-default-file="{{asset('assets/img/banner.jpg')}}" />
+                                     </div>
+            
+                                </div>
+                            </div>
+                </div>
+                 </div>
+              <!--four tab 2-->
+            
+            
+            
+            
+            
+            
+  <!--            <hr style="width: 131px;-->
+  <!--margin: auto;margin-top:20px;">-->
+  
+  <!--add upp-->
+   <div style="padding:0px 2.75rem;">
+   <div style="border-radius:5px 5px 5px 5px;" class="d-flex justify-content-start mt-5 ">
+
+        <div style="width:-webkit-fill-available;" class="">
+            <div style="width:-webkit-fill-available;" class="btn-group" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-label-secondary btn btn-outline-secondary">All User</button>
+                <button type="button" class="btn btn-label-secondary btn btn-outline-secondary">Standart</button>
+                <button type="button" class="btn btn-label-secondary  btn btn-outline-secondary">Premium</button>
+                <button type="button" class="btn btn-label-secondary  btn btn-outline-secondary">Vip</button>
+                <!--<button type="button" class="btn btn-label-secondary  btn btn-outline-secondary"> <i class="fa fa-send-o" style="font-size:20px;color:#59d068"></i></button>-->
+            </div>
+        </div>
+
+
+
+
+
+        <div style="margin-left:10px;" class="d-flex justify-content-center align-items-center btn btn-outline-secondary">
+            <i class="fa fa-send-o" style="font-size:20px;color:#59d068"></i>
+        </div>
+    </div>
+    </div>
+  <!--add upp-->
+  
+<hr style="width: 131px;
+  margin: auto;margin-top:20px;">
+  
+             <div style="padding:0px 2.75rem;">
+              <div style="margin-left:5px;margin-top:20px;" class="row pick-content d-flex justify-content-around">
+
+                    <!--<h6 style="text-align:center;">None</h6>     -->
+                    <!--<div style="width:33.3%" class="carousel-inner brchg imagepicker " >-->
+                    <!--    <h6 style="text-align:center;">None</h6>-->
+                        <!--<div style="background-image:url('{{asset('assets/img/thanks1.png')}}');height: 80px; width: 80px; background-size: 100% 100%;background-repeat: no-repeat;margin:auto;" class="imagepicker" data-imagetwo="#image11">-->
+
+                        <!--</div>-->
+                    <!--     <object style="height:80px;width:80px;margin:auto;display:flex;" data="{{asset('assets/img/thanks1.png')}}" data-original3="{{asset('assets/img/thanks1.png')}}" data-default3="{{asset('assets/img/nonedef.png')}}" width="80" height="80" class="carousel-inner imagechangefour" ></object>-->
+
+                    <!--</div>-->
+                    <!--<div style="background-image:url('{{asset('assets/img/thanks1.png')}}');height: 80px; width: 80px; background-size: 100% 100%;background-repeat: no-repeat;" class="carousel-inner brchg imagepicker" data-imagetwo="#image11">-->
+
+                    <!--</div>-->
+
+
+
+                    <!--<h6 style="text-align:center;">Modern</h6>-->
+                    <div style="width:33.3%" class="carousel-inner brchg imagepicker " >
+                        <h6 style="text-align:center;">Modern</h6>
+                        <!--<div style="background-image:url('{{asset('assets/img/thanks3.png')}}');height: 80px; width: 80px; background-size: 100% 100%;background-repeat: no-repeat;margin:auto;" class="carousel-inner brchg imagepicker" data-imagetwo="#image22">-->
+                        <!--</div>-->
+                         <!--<object style="height:80px;width:80px;margin:auto;display:flex;" data="{{asset('assets/img/thanks3.png')}}" width="80" height="80" class="carousel-inner brchg imagepicker imagechange" data-imagetwo="#image22"></object>-->
+                         <object style="height:80px;width:80px;margin:auto;display:flex;" data="{{asset('assets/img/four4.png')}}" data-original3="{{asset('assets/img/four4.png')}}" data-default3="{{asset('assets/img/
+fourdef2.png')}}" width="80" height="80" class="carousel-inner imagechangefour" data-contentfour2="#imagecontentfour1"></object>
+                    </div>
+
+
+                    <!--<h6 style="text-align:center;">Elegant</h6>-->
+                    <div style="width:33.3%"  class="carousel-inner brchg imagepicker " >
+                        <h6 style="text-align:center;">Elegant</h6>
+                        <!--<div style="background-image:url('{{asset('assets/img/dashes.png')}}');height: 80px; width:  80px; background-size: 100% 100%;background-repeat: no-repeat;margin:auto;border:2px solid #80e492;" class="carousel-inner brchg imagepicker tabbactiveclick" data-imagetwo="#image33">-->
+                        <!--</div>-->
+                         <object style="height:80px;width:80px;margin:auto;display:flex;" data="{{asset('assets/img/four4(4).png')}}" data-original3="{{asset('assets/img/four4(4).png')}}" data-default3="{{asset('assets/img/
+fourdef1.png')}}" width="80" height="80" class="carousel-inner imagechangefour"  data-contentfour2="#imagecontentfour2"></object>
+
+                    </div>
+                </div>
+            </div>
+            
+            
+            
+        </div>
+    </div>
+
+
+
+
+
+  
+ <div style="padding:0px 2.75rem;">
+    <hr style="width: 131px;
+  margin: auto;margin-top:20px;">
+    <div style="background: #eaeaea;border-radius:5px 5px 0px 0px;" class="d-flex mt-3  ">
+        <input style="height: 90px;" type="text" class="form-control w-100" placeholder="Enter The description">
+    </div>
+
+
+    <hr style="    width: 131px;
+  margin: auto;margin-top:20px">
+
+    <div style="width:-webkit-fill-available;" class="mt-3 clickhere  ">
+        <div style="width:-webkit-fill-available;" class="btn-group" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-label-secondary btn btn-outline-secondary imagea imagepicker active" data-imageone="#image1" data-imagetwo="#image11">1 Image</button>
+            <button type="button" class="btn btn-label-secondary btn btn-outline-secondary imagea imagepicker" data-imageone="#image2" data-imagetwo="#image22">2 Image</button>
+            <button type="button" class="btn btn-label-secondary  btn btn-outline-secondary imagea imagepicker " data-imageone="#image3" data-imagetwo="#image33">3 Image</button>
+            <button type="button" class="btn btn-label-secondary  btn btn-outline-secondary imagea imagepicker" data-imageone="#image4" data-imagetwo="#image44">+4 Image</button>
+
+        </div>
+    </div>
+</div>
+    <!--<hr style="    width: 131px;-->
+    <!--margin: auto;margin-top:20px">-->
+
+
+    <!--      <div style="background-image:url('{{asset('assets/img/hand.png')}}');height: 250px; width: 100%; background-size: 100% 100%;background-repeat: no-repeat;" class="carousel-inner">-->
+    <!--  <div class="carousel-item active">-->
+    <!--<h2 style="font-size:28px;color:whitesmoke;margin-top:20px;text-align:center;" class="">User Text Will be then <br> showed here</h2> -->
+    <!--  </div>-->
+    <!--</div>-->
+</div>
+  
+<div  id="shahrevideo" class="share-content">
+    
+      
+<!-- Main container -->
+<div style="margin-top:-38px;" id="video11" class="video-content1">
+
+  <!-- File input and button -->
+  <input type="file" hidden id="videoupl">
+  <a style="top:5px;padding:8px;" href="javascript:void(0)" class="btn btn-primary text-nowrap upload-btn">
+    <label for="videoupl" class="">
+      <i class="fa fa-upload"></i>
+    </label>
+  </a>
+
+  <!-- Video player -->
+  <div style="height: 310px; width: 100%; background-size: 100% 100%; background-repeat: no-repeat; position: relative;" class="carousel-inner">
+    <video controls class="videoclass">
+      <source src="https://dash.yekbun.net/assets/img/pexels-pressmaster-3195394-3840x2160-25fps_2.mp4">
+    </video>
+  </div>
+
+  <!-- Additional controls -->
+  <div style="padding: 0px 2.75rem;">
+    <div style="border-radius: 5px; border: 1px solid #ccc;" class="d-flex justify-content-start mt-5">
+      <div style="width: -webkit-fill-available;">
+        <div style="width: -webkit-fill-available;" class="btn-group" role="group" aria-label="Basic example">
+          <button type="button" class="btn btn-label-secondary btn btn-outline-secondary">All User</button>
+          <button type="button" class="btn btn-label-secondary btn btn-outline-secondary">Standart</button>
+          <button type="button" class="btn btn-label-secondary btn btn-outline-secondary">Premium</button>
+          <button type="button" class="btn btn-label-secondary btn btn-outline-secondary">Vip</button>
+        </div>
+      </div>
+
+      <div style="margin-left: 10px;" class="d-flex justify-content-center align-items-center btn btn-outline-secondary">
+        <i class="fa fa-send-o" style="font-size:20px;color:#59d068"></i>
+      </div>
+    </div>
+  </div>
+</div>
+
+        
+        
+           <div style="margin-top:-28px;"  id="video22" class="col-sm-12 video-content1 row  justify-content-center" >
+            <!--2 image 1st tab-->
+           <div style="margin-left:14px;padding:0px" class="row video-changecontent" id="videochangeone1" >
+            <div style="padding: 0px 0px 0px 0px;" class="col-sm-6 " >
+                <!--<input name="file1" type="file" class="dropify" data-height="350" data-default-file="{{asset('assets/img/hand.png')}}" />-->
+                  <div style="height: 150px; width: 100%; background-size: 100% 100%; background-repeat: no-repeat;" class="carousel-inner">
+                      
+                      
+                       <input type="file" hidden id="videoupl2one">
+  <a href="javascript:void(0)" class="btn btn-primary text-nowrap upload-btn">
+    <label for="videoupl2one" class="">
+      <i class="fa fa-upload"></i>
+    </label>
+  </a>
+        <video style="height:-webkit-fill-available;width:-webkit-fill-available;position:relative;" controls="" class="videoclass2one">
+            <source src="{{asset('assets/img/straight.mp4')}}">
+        </video>
+    </div>
+                <!-- <div  style="background-image:url('{{asset('assets/img/jamunda.png')}}');height: 250px; width: 100%; background-size: 100% 100%;background-repeat: no-repeat;" class="carousel-inner">-->
+                <!--</div>-->
+
+            </div>
+            <div style="padding: 0px 0px 0px 0px;"  class="col-sm-6">
+                  <div style="height: 150px; width: 100%; background-size: 100% 100%; background-repeat: no-repeat;" class="carousel-inner">
+                        <input type="file" hidden id="videoupl2two">
+  <a href="javascript:void(0)" class="btn btn-primary text-nowrap upload-btn">
+    <label for="videoupl2two" class="">
+      <i class="fa fa-upload"></i>
+    </label>
+  </a>  
+        <video style="height:-webkit-fill-available;width:-webkit-fill-available;position:relative;" controls="" class="videoclass2two">
+              <source src="{{asset('assets/img/straight.mp4')}}">
+        </video>
+    </div>
+                <!--<input name="file1" type="file" class="dropify" data-height="350" data-default-file="{{asset('assets/img/hand.png')}}" />-->
+                <!--<div  style="background-image:url('{{asset('assets/img/jamunda.png')}}');height: 250px; width: 100%; background-size: 100% 100%;background-repeat: no-repeat;" class="carousel-inner">-->
+                <!--</div>-->
+            </div>
+         </div>
+          <!--2 image 1st tab-->
+         <!--2 image second tab-->
+          <div  style="margin-left:14px;padding:0px" class="row video-changecontent" id="videochangeone2" >
+            
+            <div  style="padding: 0px 0px 0px 0px;" class="col-sm-12">
+                  <div style="height: 315px; width: 100%; background-size: 100% 100%; background-repeat: no-repeat;" class="carousel-inner">
+                      
+                          <input type="file" hidden id="videoupl22one">
+  <a style="top:16px;padding:10px;"  href="javascript:void(0)" class="btn btn-primary text-nowrap upload-btn">
+    <label for="videoupl22one" class="">
+      <i class="fa fa-upload"></i>
+    </label>
+  </a>
+  
+        <video style="position:relative;" controls="" class="videoclass22one">
+            <source src="https://dash.yekbun.net/assets/img/pexels-pressmaster-3195394-3840x2160-25fps_2.mp4">
+        </video>
+    </div>
+                <!--<input name="file1" type="file" class="dropify" data-height="100" data-default-file="{{asset('assets/img/hand.png')}}" />-->
+                <!--<div  style="background-image:url('{{asset('assets/img/jamunda.png')}}');height: 250px; width: 100%; background-size: 100% 100%;background-repeat: no-repeat;" class="carousel-inner">-->
+                <!--</div>-->
+            </div>
+              <div style="padding:0px"  class="col-sm-12">
+                    <div style="height: 315px; width: 100%; background-size: 100% 100%; background-repeat: no-repeat;" class="carousel-inner">
+                        
+                            <input type="file" hidden id="videoupl22two">
+  <a style="top:16px;padding:10px;"  href="javascript:void(0)" class="btn btn-primary text-nowrap upload-btn">
+    <label for="videoupl22two" class="">
+      <i class="fa fa-upload"></i>
+    </label>
+  </a>
+  
+                        
+        <video style="position:relative;" controls="" class="videoclass22two">
+            <source src="https://dash.yekbun.net/assets/img/pexels-pressmaster-3195394-3840x2160-25fps_2.mp4">
+        </video>
+    </div>
+                <!--<input name="file1" type="file" class="dropify" data-height="100" data-default-file="{{asset('assets/img/hand.png')}}" />-->
+                <!--<div  style="background-image:url('{{asset('assets/img/jamunda.png')}}');height: 250px; width: 100%; background-size: 100% 100%;background-repeat: no-repeat;" class="carousel-inner">-->
+                <!--</div>-->
+            </div>
+         </div>
+         
+         <!--2 image second tab-->
+         
+           
+  <!--line here-->
+  
+  <!--      <hr style="width: 131px;-->
+  <!--margin: auto;margin-top:20px;">-->
+   <div style="padding:0px 2.75rem;">
+   <div style="border-radius:5px 5px 5px 5px;" class="d-flex justify-content-start mt-5 ">
+
+        <div style="width:-webkit-fill-available;" class="">
+            <div style="width:-webkit-fill-available;" class="btn-group" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-label-secondary btn btn-outline-secondary">All User</button>
+                <button type="button" class="btn btn-label-secondary btn btn-outline-secondary">Standart</button>
+                <button type="button" class="btn btn-label-secondary  btn btn-outline-secondary">Premium</button>
+                <button type="button" class="btn btn-label-secondary  btn btn-outline-secondary">Vip</button>
+                <!--<button type="button" class="btn btn-label-secondary  btn btn-outline-secondary"> <i class="fa fa-send-o" style="font-size:20px;color:#59d068"></i></button>-->
+            </div>
+        </div>
+
+
+
+
+        <div style="margin-left:10px;" class="d-flex justify-content-center align-items-center btn btn-outline-secondary">
+            <i class="fa fa-send-o" style="font-size:20px;color:#59d068"></i>
+        </div>
+    </div>
+</div>
+
+<hr style="width: 131px;
+  margin: auto;margin-top:20px;">
+            <!--<div class="d-flex justify-content-around align-items-center">-->
+            <!--     <h6 style="text-align:center;">None</h6>     -->
+            <!--      <h6 style="text-align:center;">Modern</h6>     -->
+            <!--  <h6 style="text-align:start;">Elegant</h6>     -->
+
+            <!--</div> -->
+ <div style="padding:0px 2.75rem;">
+            <div style="margin-left:5px;margin-top:20px;" class="row pick-content d-flex justify-content-around">
+
+                <div style="width:33.3%"  class="carousel-inner " >
+                    <h6 style="text-align:center;">Modern</h6>
+                    <!--<div style="background-image:url('{{asset('assets/img/thanks3.png')}}');height: 80px; width: 80px; background-size: 100% 100%;background-repeat: no-repeat;margin:auto;border:2px solid #80e492;" class="carousel-inner brchg imagepicker tabbactiveclick" data-imagetwo="#image22">-->
+                    <!--</div>-->
+                      <object style="height:80px;width:80px;margin:auto;display:flex;" data="{{asset('assets/img/thanks3.png')}}" data-original="{{asset('assets/img/thanks3.png')}}" data-default="{{asset('assets/img/colorimage.PNG')}}" width="80" height="80" class="carousel-inner  videochangeclass" data-videochange="#videochangeone1"></object>
+
+                </div>
+
+
+                <!--<h6 style="text-align:center;">Elegant</h6>-->
+                <div style="width:33.3%" class="carousel-inner  " >
+                    <h6 style="text-align:center;">Elegant</h6>
+                    <!--<div style="background-image:url('{{asset('assets/img/dashes.png')}}');height: 80px; width:  80px; background-size: 100% 100%;background-repeat: no-repeat;margin:auto;" class="carousel-inner brchg imagepicker" data-imagetwo="#image33">-->
+                    <!--</div>-->
+                     <object style="height:80px;width:80px;margin:auto;display:flex;" data="{{asset('assets/img/thanks2.png')}}" data-original="{{asset('assets/img/thanks2.png')}}" data-default="{{asset('assets/img/thanks2 (1).png')}}" width="80" height="80" class="carousel-inner   videochangeclass"  data-videochange="#videochangeone2"></object>
+
+                </div>
+            </div>
+            </div>
+        </div>
+        <!--video 2-->
+               <div style="display:contents;" id="video33" class="col-sm-12 video-content1 row  ">
+                       
+                        <!--3 image 1st tab-->
+                        <div style="padding:0px;" class="video-container">
+                 <div style="margin-top:-40px;padding:0px;" class="col-sm-12 video-changecontent2" id="videochangetwo1">
+                        <div  class="col-sm-12 ">
+                             <div style="height: 315px; width: 100%; background-size: 100% 100%; background-repeat: no-repeat;" class="carousel-inner">
+                                 
+                                    <input type="file" hidden id="videoupl31one">
+  <a style="top:30px;padding:8px;" href="javascript:void(0)" class="btn btn-primary text-nowrap upload-btn">
+    <label for="videoupl31one" class="">
+      <i class="fa fa-upload"></i>
+    </label>
+  </a>
+                                 
+        <video style="position:relative;" controls="" class="videoclass31one">
+            <source src="https://dash.yekbun.net/assets/img/pexels-pressmaster-3195394-3840x2160-25fps_2.mp4">
+        </video>
+    </div>
+                <!--<input name="file1" type="file" class="dropify" data-height="100" data-default-file="{{asset('assets/img/hand.png')}}" />-->
+                <!-- <div  style="background-image:url('{{asset('assets/img/jamunda.png')}}');height: 250px; width: 100%; background-size: 100% 100%;background-repeat: no-repeat;" class="carousel-inner">-->
+                </div>
+            
+            <div class="row">
+               <div style="padding:0px;" class="col-sm-6 ">
+                <!--<input name="file1" type="file" class="dropify" data-height="100" data-default-file="{{asset('assets/img/hand.png')}}" />-->
+                 <div style=" width: 100%; background-size: 100% 100%; background-repeat: no-repeat;" class="carousel-inner">
+                        <input type="file" hidden id="videoupl31two">
+  <a href="javascript:void(0)" class="btn btn-primary text-nowrap upload-btn">
+    <label for="videoupl31two" class="">
+      <i class="fa fa-upload"></i>
+    </label>
+  </a>
+        <video style="position:relative;" controls="" class="videoclass31two">
+            <source src="https://dash.yekbun.net/assets/img/pexels-pressmaster-3195394-3840x2160-25fps_2.mp4">
+        </video>
+    </div>
+                <!-- <div  style="background-image:url('{{asset('assets/img/jamunda.png')}}');height: 250px; width: 100%; background-size: 100% 100%;background-repeat: no-repeat;" class="carousel-inner">-->
+                <!--</div>-->
+            </div>
+            <div style="padding:0px;" class="col-sm-6 ">
+                
+                 <div style="width: 100%; background-size: 100% 100%; background-repeat: no-repeat;" class="carousel-inner">
+                           <input type="file" hidden id="videoupl31three">
+  <a style="right:22px;" href="javascript:void(0)" class="btn btn-primary text-nowrap upload-btn">
+    <label for="videoupl31three" class="">
+      <i class="fa fa-upload"></i>
+    </label>
+  </a>
+        <video style="position:relative;" controls="" class="videoclass videoclass31three" >
+            <source src="https://dash.yekbun.net/assets/img/pexels-pressmaster-3195394-3840x2160-25fps_2.mp4">
+        </video>
+    </div>
+                <!--<input name="file1" type="file" class="dropify" data-height="100" data-default-file="{{asset('assets/img/hand.png')}}" />-->
+                <!-- <div  style="background-image:url('{{asset('assets/img/jamunda.png')}}');height: 250px; width: 100%; background-size: 100% 100%;background-repeat: no-repeat;" class="carousel-inner">-->
+                <!--</div>-->
+            </div>
+            </div>
+            </div>
+            </div>
+              <!--3 image 1st tab-->
+              
+              
+                <!--3 image 2nd tab-->
+                
+                    <div style="padding:0px;margin-top:-40px" class="col-sm-12 video-changecontent2" id="videochangetwo2">
+                        <div style="padding:0px;" class="col-sm-12 ">
+                <!-- <div  style="background-image:url('{{asset('assets/img/jamunda.png')}}');height: 250px; width: 100%; background-size: 100% 100%;background-repeat: no-repeat;" class="carousel-inner">-->
+                            <div class="row">
+                                <div style="padding: 0px 0px 0px 0px;" class="col-sm-8">
+                                     <div style="height: 200px; width: 100%; background-size: 100% 100%; background-repeat: no-repeat;" class="carousel-inner">
+                                            <input type="file" hidden id="videoupl32one">
+  <a style="top:16px;" href="javascript:void(0)" class="btn btn-primary text-nowrap upload-btn">
+    <label for="videoupl32one" class="">
+      <i class="fa fa-upload"></i>
+    </label>
+  </a>
+        <video style="height:-webkit-fill-available;width:-webkit-fill-available;position:relative;" controls="" class="videoclass videoclass32one">
+            <source src="{{asset('assets/img/straight.mp4')}}">
+        </video>
+    </div>
+                <!--<input name="file1" type="file" class="dropify" data-height="200" data-default-file="{{asset('assets/img/hand.png')}}" />-->
+                                </div>
+                                 <div style="padding: 0px;" class="col-sm-4">
+                                    <div class="col-sm-12">
+                                         <div style="height: 100px; width: 100%; background-size: 100% 100%; background-repeat: no-repeat;" class="carousel-inner">
+                                              <input type="file" hidden id="videoupl32two">
+  <a style="top:16px;padding:2px;right:19px;" href="javascript:void(0)" class="btn btn-primary text-nowrap upload-btn">
+    <label for="videoupl32two" class="">
+      <i class="fa fa-upload"></i>
+    </label>
+  </a>
+         <video style="height:-webkit-fill-available;width:-webkit-fill-available;position:relative;" controls="" class="videoclass videoclass32two">
+            <source src="{{asset('assets/img/straight.mp4')}}">
+        </video>
+    </div>
+                                            <!--<input name="file1" type="file" class="dropify" data-height="100" data-default-file="{{asset('assets/img/hand.png')}}" />-->
+                                    </div>
+                                     <div class="col-sm-12">
+                                          <div style="height: 100px; width: 100%; background-size: 100% 100%; background-repeat: no-repeat;" class="carousel-inner">
+                                               <input type="file" hidden id="videoupl32three">
+  <a style="top:0px;padding:2px;right:19px;" href="javascript:void(0)" class="btn btn-primary text-nowrap upload-btn">
+    <label for="videoupl32three" class="">
+      <i class="fa fa-upload"></i>
+    </label>
+  </a>
+        <video style="height:-webkit-fill-available;width:-webkit-fill-available" controls="" class="videoclass videoclass32three">
+            <source src="{{asset('assets/img/straight.mp4')}}">
+        </video>
+    </div>
+                                              <!--<input name="file1" type="file" class="dropify" data-height="100" data-default-file="{{asset('assets/img/hand.png')}}" />-->
+                                     </div>
+            
+                                </div>
+                            </div>
+                </div>
+          
+            </div>
+                     <!--3 image 2nd tab-->
+                      <div style="padding:0px 2.75rem;">
+               <div style="border-radius:5px 5px 5px 5px;" class="d-flex justify-content-start mt-3">
+
+        <div style="width:-webkit-fill-available;" class="">
+            <div style="width:-webkit-fill-available;" class="btn-group" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-label-secondary btn btn-outline-secondary">All User</button>
+                <button type="button" class="btn btn-label-secondary btn btn-outline-secondary">Standart</button>
+                <button type="button" class="btn btn-label-secondary  btn btn-outline-secondary">Premium</button>
+                <button type="button" class="btn btn-label-secondary  btn btn-outline-secondary">Vip</button>
+                <!--<button type="button" class="btn btn-label-secondary  btn btn-outline-secondary"> <i class="fa fa-send-o" style="font-size:20px;color:#59d068"></i></button>-->
+            </div>
+        </div>
+
+
+
+
+
+        <div style="margin-left:10px;" class="d-flex justify-content-center align-items-center btn btn-outline-secondary">
+            <i class="fa fa-send-o" style="font-size:20px;color:#59d068"></i>
+        </div>
+    </div>
+          </div>
+            <div>
+                <!--<hr style="width: 131px;-->
+                <!--  margin: auto;margin-top:20px;">-->
+
+                <!--        <div class="d-flex justify-content-around align-items-center">-->
+                <!--             <h6 style="text-align:center;">None</h6>     -->
+                <!--              <h6 style="text-align:center;">Modern</h6>     -->
+                <!--          <h6 style="text-align:start;">Elegant</h6>     -->
+
+                <!--        </div> -->
+
+                <!--        <div style="margin-left:5px" class="row pick-content d-flex justify-content-around">-->
+
+                <!--<h6 style="text-align:center;">None</h6>     -->
+                <!--  <div style="background-image:url('{{asset('assets/img/thanks1.png')}}');height: 80px; width: 80px; background-size: 100% 100%;background-repeat: no-repeat;" class="carousel-inner brchg imagepicker" data-imagetwo="#image11">-->
+                <!--  </div>-->
+
+
+
+                <!--<h6 style="text-align:center;">Modern</h6>-->
+                <!--     <div style="background-image:url('{{asset('assets/img/thanks3.png')}}');height: 80px; width: 80px; background-size: 100% 100%;background-repeat: no-repeat;" class="carousel-inner brchg imagepicker" data-imagetwo="#image22">-->
+                <!--  </div>-->
+
+
+
+                <!--<h6 style="text-align:center;">Elegant</h6>-->
+                <!--   <div style="background-image:url('{{asset('assets/img/dashes.png')}}');height: 80px; width:  80px; background-size: 100% 100%;background-repeat: no-repeat;" class="carousel-inner brchg imagepicker" data-imagetwo="#image33">-->
+                <!--  </div>-->
+
+                <!--</div>-->
+                <hr style="width: 131px;
+  margin: auto;margin-top:20px;">
+
+                <!--<div class="d-flex justify-content-around align-items-center">-->
+                <!--     <h6 style="text-align:center;">None</h6>     -->
+                <!--      <h6 style="text-align:center;">Modern</h6>     -->
+                <!--  <h6 style="text-align:start;">Elegant</h6>     -->
+
+                <!--</div> -->
+ <div style="padding:0px 2.75rem;">
+                <div style="margin-left:5px;margin-top:20px;" class="row pick-content d-flex justify-content-around">
+
+                    <div style="width:33.3%" class="carousel-inner brchg imagepicker " data-imagetwo="#image22">
+                        <h6 style="text-align:center;">Modern</h6>
+                        <!--<div style="background-image:url('{{asset('assets/img/thanks3.png')}}');height: 80px; width: 80px; background-size: 100% 100%;background-repeat: no-repeat;margin:auto;" class="carousel-inner brchg imagepicker" data-imagetwo="#image22">-->
+                        <!--</div>-->
+                         <!--<object style="height:80px;width:80px;margin:auto;display:flex;" data="{{asset('assets/img/thanks3.png')}}" width="80" height="80" class="carousel-inner brchg imagepicker imagechange" data-imagetwo="#image22"></object>-->
+                         <object style="height:80px;width:80px;margin:auto;display:flex;" data="{{asset('assets/img/three3.png')}}"  data-original2="{{asset('assets/img/three3.png')}}"  data-default2="{{asset('assets/img/threedef1.png')}}" width="80" height="80" class="carousel-inner  videochangetwo2" data-videochangetwo="#videochangetwo1"></object>
+                    </div>
+
+
+                    <!--<h6 style="text-align:center;">Elegant</h6>-->
+                    <div style="width:33.3%"  class="carousel-inner brchg imagepicker " data-imagetwo="#image33">
+                        <h6 style="text-align:center;">Elegant</h6>
+                        <!--<div style="background-image:url('{{asset('assets/img/dashes.png')}}');height: 80px; width:  80px; background-size: 100% 100%;background-repeat: no-repeat;margin:auto;border:2px solid #80e492;" class="carousel-inner brchg imagepicker tabbactiveclick" data-imagetwo="#image33">-->
+                        <!--</div>-->
+                         <object style="height:80px;width:80px;margin:auto;display:flex;" data="{{asset('assets/img/three3(2).png')}}" data-original2="{{asset('assets/img/three3(2).png')}}" data-default2="{{asset('assets/img/threedef2.png')}}" width="80" height="80" class="carousel-inner videochangetwo2" data-videochangetwo="#videochangetwo2"  ></object>
+
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+        <!--video 3-->
+        
+        <!--video 4-->
+        
+          <div style="margin-top:-28px;" id="video44" class="col-sm-12 video-content1 row  ">
+              <!--four tab 1-->
+              <div style="margin-left:13px;padding:0px" class="videocontentfour" id="videocontentfour1">
+            <div class="d-flex flex-wrap ">
+            <div style="padding:0px;width:50%" >
+                  <div style="height: 90px; width: 100%; background-size: 100% 100%; background-repeat: no-repeat;" class="carousel-inner">
+                      
+                        <input type="file" hidden id="videoupl41one">
+  <a style="padding:2px;" href="javascript:void(0)" class="btn btn-primary text-nowrap upload-btn">
+    <label for="videoupl41one" class="">
+      <i class="fa fa-upload"></i>
+    </label>
+  </a>
+                      
+        <video style="height:-webkit-fill-available;width:-webkit-fill-available;position:relative;" controls="" class="videoclass videoclass41one">
+            <source src="{{asset('assets/img/straight.mp4')}}">
+        </video>
+    </div>
+                <!--<input name="file1" type="file" class="dropify" data-height="100" data-default-file="{{asset('assets/img/hand.png')}}" />-->
+                <!-- <div  style="background-image:url('{{asset('assets/img/jamunda.png')}}');height: 250px; width: 100%; background-size: 100% 100%;background-repeat: no-repeat;" class="carousel-inner">-->
+                <!--</div>-->
+            </div>
+            <div style="padding:0px;width:50%">
+                  <div style="height: 150px; width: 100%; background-size: 100% 100%; background-repeat: no-repeat;" class="carousel-inner">
+                        <input type="file" hidden id="videoupl41two">
+  <a href="javascript:void(0)" class="btn btn-primary text-nowrap upload-btn">
+    <label for="videoupl41two" class="">
+      <i class="fa fa-upload"></i>
+    </label>
+  </a>
+        <video style="height:-webkit-fill-available;width:-webkit-fill-available;position:relative;" controls="" class="videoclass videoclass41two">
+            <source src="{{asset('assets/img/straight.mp4')}}">
+        </video>
+    </div>
+                <!--<input name="file1" type="file" class="dropify" data-height="150" data-default-file="{{asset('assets/img/hand.png')}}" />-->
+                <!-- <div  style="background-image:url('{{asset('assets/img/jamunda.png')}}');height: 250px; width: 100%; background-size: 100% 100%;background-repeat: no-repeat;" class="carousel-inner">-->
+                <!--</div>-->
+            </div>
+            <div style="width:50%;padding:0px;margin-top:-60px;">
+                  <div style="height: 150px; width: 100%; background-size: 100% 100%; background-repeat: no-repeat;" class="carousel-inner">
+                       <input type="file" hidden id="videoupl41three">
+  <a href="javascript:void(0)" class="btn btn-primary text-nowrap upload-btn">
+    <label for="videoupl41three" class="">
+      <i class="fa fa-upload"></i>
+    </label>
+  </a>
+       <video style="height:-webkit-fill-available;width:-webkit-fill-available;position:relative;" controls="" class="videoclass videoclass41three">
+            <source src="{{asset('assets/img/straight.mp4')}}">
+        </video>
+    </div>
+                <!--<input name="file1" type="file" class="dropify" data-height="150" data-default-file="{{asset('assets/img/hand.png')}}" />-->
+                <!-- <div  style="background-image:url('{{asset('assets/img/jamunda.png')}}');height: 250px; width: 100%; background-size: 100% 100%;background-repeat: no-repeat;" class="carousel-inner">-->
+                <!--</div>-->
+            </div>
+            <div style="width:50%;padding:0px;">
+                  <div style="height: 90px; width: 100%; background-size: 100% 100%; background-repeat: no-repeat;" class="carousel-inner">
+                       <input type="file" hidden id="videoupl41four">
+  <a style="padding:2px;" href="javascript:void(0)" class="btn btn-primary text-nowrap upload-btn">
+    <label for="videoupl41four" class="">
+      <i class="fa fa-upload"></i>
+    </label>
+  </a>
+        <video style="height:-webkit-fill-available;width:-webkit-fill-available;position:relative;" controls="" class="videoclass videoclass41four">
+            <source src="{{asset('assets/img/straight.mp4')}}">
+        </video>
+    </div>
+                <!--<input name="file1" type="file" class="dropify" data-height="100" data-default-file="{{asset('assets/img/hand.png')}}" />-->
+                <!--<div  style="background-image:url('{{asset('assets/img/jamunda.png')}}');height: 250px; width: 100%; background-size: 100% 100%;background-repeat: no-repeat;" class="carousel-inner">-->
+                <!--</div>-->
+            </div>
+            
+            </div>
+            </div>
+              <!--four tab 1-->
+            
+            <!--four tab 2-->
+             <div class="videocontentfour" id="videocontentfour2">
+               <div style="padding:0px;margin-left:14px;" class="col-sm-12 ">
+                <!-- <div  style="background-image:url('{{asset('assets/img/jamunda.png')}}');height: 250px; width: 100%; background-size: 100% 100%;background-repeat: no-repeat;" class="carousel-inner">-->
+                            <div class="row">
+                                <div style="padding: 0px 0px 0px 0px;"  class="col-sm-8">
+                                      <div style="height: 300px; width: 100%; background-size: 100% 100%; background-repeat: no-repeat;" class="carousel-inner">
+                                          <input type="file" hidden id="videoupl42one">
+  <a href="javascript:void(0)" class="btn btn-primary text-nowrap upload-btn">
+    <label for="videoupl42one" class="">
+      <i class="fa fa-upload"></i>
+    </label>
+  </a>
+        <video style="height:-webkit-fill-available;width:-webkit-fill-available;position:relative;" controls="" class="videoclass videoclass42one">
+            <source src="{{asset('assets/img/straight.mp4')}}">
+        </video>
+    </div>
+                <!--<input name="file1" type="file" class="dropify" data-height="300" data-default-file="{{asset('assets/img/hand.png')}}" />-->
+                                </div>
+                                 <div style="padding: 0px 0px 0px 0px;"  class="col-sm-4">
+                                    <div style="padding: 0px 0px 0px 0px;"  class="col-sm-12">
+                                          <div style="height: 100px; width: 100%; background-size: 100% 100%; background-repeat: no-repeat" class="carousel-inner">
+                                                <input type="file" hidden id="videoupl42two">
+  <a style="padding:2px;" href="javascript:void(0)" class="btn btn-primary text-nowrap upload-btn">
+    <label for="videoupl42two" class="">
+      <i class="fa fa-upload"></i>
+    </label>
+  </a>
+        <video style="height:-webkit-fill-available;width:-webkit-fill-available;position:relative;" controls="" class="videoclass videoclass42two">
+            <source src="{{asset('assets/img/straight.mp4')}}">
+        </video>
+    </div>
+                                            <!--<input name="file1" type="file" class="dropify" data-height="100" data-default-file="{{asset('assets/img/hand.png')}}" />-->
+                                    </div>
+                                     <div style="padding: 0px 0px 0px 0px;"  class="col-sm-12">
+                                           <div style="height: 100px; width: 100%; background-size: 100% 100%; background-repeat: no-repeat" class="carousel-inner">
+                                                  <input type="file" hidden id="videoupl42three">
+  <a style="padding:2px;" href="javascript:void(0)" class="btn btn-primary text-nowrap upload-btn">
+    <label for="videoupl42three" class="">
+      <i class="fa fa-upload"></i>
+    </label>
+  </a>
+        <video style="height:-webkit-fill-available;width:-webkit-fill-available;position:relative;" controls="" class="videoclass videoclass42three">
+            <source src="{{asset('assets/img/straight.mp4')}}">
+        </video>
+    </div>
+                                              <!--<input name="file1" type="file" class="dropify" data-height="100" data-default-file="{{asset('assets/img/hand.png')}}" />-->
+                                     </div>
+                                      <div style="padding: 0px 0px 0px 0px;"  class="col-sm-12">
+                                            <div style="height: 100px; width: 100%; background-size: 100% 100%; background-repeat: no-repeat" class="carousel-inner">
+                                                   <input type="file" hidden id="videoupl42four">
+  <a style="padding:2px;" href="javascript:void(0)" class="btn btn-primary text-nowrap upload-btn">
+    <label for="videoupl42four" class="">
+      <i class="fa fa-upload"></i>
+    </label>
+  </a>
+       <video style="height:-webkit-fill-available;width:-webkit-fill-available;position:relative;" controls="" class="videoclass videoclass42four">
+            <source src="{{asset('assets/img/straight.mp4')}}">
+        </video>
+    </div>
+                                              <!--<input name="file1" type="file" class="dropify" data-height="100" data-default-file="{{asset('assets/img/hand.png')}}" />-->
+                                     </div>
+            
+                                </div>
+                            </div>
+                </div>
+                 </div>
+              <!--four tab 2-->
+            
+            
+            
+            
+            
+            
+  <!--            <hr style="width: 131px;-->
+  <!--margin: auto;margin-top:20px;">-->
+  
+  <!--add upp-->
+   <div style="padding:0px 2.75rem;">
+   <div style="border-radius:5px 5px 5px 5px;" class="d-flex justify-content-start mt-3 ">
+
+        <div style="width:-webkit-fill-available;" class="">
+            <div style="width:-webkit-fill-available;" class="btn-group" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-label-secondary btn btn-outline-secondary">All User</button>
+                <button type="button" class="btn btn-label-secondary btn btn-outline-secondary">Standart</button>
+                <button type="button" class="btn btn-label-secondary  btn btn-outline-secondary">Premium</button>
+                <button type="button" class="btn btn-label-secondary  btn btn-outline-secondary">Vip</button>
+                <!--<button type="button" class="btn btn-label-secondary  btn btn-outline-secondary"> <i class="fa fa-send-o" style="font-size:20px;color:#59d068"></i></button>-->
+            </div>
+        </div>
+
+
+
+
+
+        <div style="margin-left:10px;" class="d-flex justify-content-center align-items-center btn btn-outline-secondary">
+            <i class="fa fa-send-o" style="font-size:20px;color:#59d068"></i>
+        </div>
+    </div>
+    </div>
+  <!--add upp-->
+  
+<hr style="width: 131px;
+  margin: auto;margin-top:20px;">
+  
+             <div style="padding:0px 2.75rem;">
+              <div style="margin-left:5px;margin-top:20px;" class="row pick-content d-flex justify-content-around">
+
+                   
+                    <div style="width:33.3%" class="carousel-inner brchg imagepicker " >
+                        <h6 style="text-align:center;">Modern</h6>
+                        <!--<div style="background-image:url('{{asset('assets/img/thanks3.png')}}');height: 80px; width: 80px; background-size: 100% 100%;background-repeat: no-repeat;margin:auto;" class="carousel-inner brchg imagepicker" data-imagetwo="#image22">-->
+                        <!--</div>-->
+                         <!--<object style="height:80px;width:80px;margin:auto;display:flex;" data="{{asset('assets/img/thanks3.png')}}" width="80" height="80" class="carousel-inner brchg imagepicker imagechange" data-imagetwo="#image22"></object>-->
+                         <object style="height:80px;width:80px;margin:auto;display:flex;" data="{{asset('assets/img/four4.png')}}" data-original3="{{asset('assets/img/four4.png')}}" data-default3="{{asset('assets/img/
+fourdef2.png')}}" width="80" height="80" class="carousel-inner videochangefour" data-contentfour2="#videocontentfour1"></object>
+                    </div>
+
+
+                    <!--<h6 style="text-align:center;">Elegant</h6>-->
+                    <div style="width:33.3%"  class="carousel-inner brchg imagepicker " >
+                        <h6 style="text-align:center;">Elegant</h6>
+                        <!--<div style="background-image:url('{{asset('assets/img/dashes.png')}}');height: 80px; width:  80px; background-size: 100% 100%;background-repeat: no-repeat;margin:auto;border:2px solid #80e492;" class="carousel-inner brchg imagepicker tabbactiveclick" data-imagetwo="#image33">-->
+                        <!--</div>-->
+                         <object style="height:80px;width:80px;margin:auto;display:flex;" data="{{asset('assets/img/four4(4).png')}}" data-original3="{{asset('assets/img/four4(4).png')}}" data-default3="{{asset('assets/img/
+fourdef1.png')}}" width="80" height="80" class="carousel-inner videochangefour"  data-contentfour2="#videocontentfour2"></object>
+
+                    </div>
+                </div>
+            
+            </div>
+            
+            
+        </div>
+          <!--video 4-->
+        
+        
+
+    <!--<div style="border-radius:5px 5px 5px 5px;" class="d-flex justify-content-start mt-2 ">-->
+
+    <!--    <div style="width:-webkit-fill-available;" class="">-->
+    <!--        <div style="width:-webkit-fill-available;" class="btn-group" role="group" aria-label="Basic example">-->
+    <!--            <button type="button" class="btn btn-label-secondary btn btn-outline-secondary">All User</button>-->
+    <!--            <button type="button" class="btn btn-label-secondary btn btn-outline-secondary">Standart</button>-->
+    <!--            <button type="button" class="btn btn-label-secondary  btn btn-outline-secondary">Premium</button>-->
+    <!--            <button type="button" class="btn btn-label-secondary  btn btn-outline-secondary">Vip</button>-->
+                <!--<button type="button" class="btn btn-label-secondary  btn btn-outline-secondary"> <i class="fa fa-send-o" style="font-size:20px;color:#59d068"></i></button>-->
+    <!--        </div>-->
+    <!--    </div>-->
+    <!--    <div style="margin-left:10px;" class="d-flex justify-content-center align-items-center btn btn-outline-secondary">-->
+    <!--        <i class="fa fa-send-o" style="font-size:20px;color:#59d068"></i>-->
+    <!--    </div>-->
+    <!--</div>-->
+
+    <hr style="width: 131px;
+  margin: auto;margin-top:20px;">
+   <div style="padding:0px 2.75rem;">
+    <div style="background: #eaeaea;border-radius:5px 5px 0px 0px;" class="d-flex mt-3  ">
+        <input style="height: 90px;" type="text" class="form-control w-100" placeholder="Enter The description">
+    </div>
+   
+  <!--  <hr style="width: 131px;-->
+  <!--margin: auto;margin-top:20px;">-->
+    <!--<div style="height: 250px; width: 100%; background-size: 100% 100%; background-repeat: no-repeat;" class="carousel-inner">-->
+    <!--    <video controls="" class="videoclass">-->
+    <!--        <source src="https://dash.yekbun.net/assets/img/pexels-pressmaster-3195394-3840x2160-25fps_2.mp4">-->
+    <!--    </video>-->
+    <!--</div>-->
+    <!--add code-->
+  <hr style="width: 131px;
+  margin: auto;margin-top:20px;">
+   <div style="padding:0px 2.75rem;">
+   <div style="width:-webkit-fill-available;" class="mt-3 clickhere ">
+        <div style="width:-webkit-fill-available;" class="btn-group" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-label-secondary btn btn-outline-secondary videoa videopicker active" data-videoone="#video1" data-videotwo="#video11">1 Video</button>
+            <button type="button" class="btn btn-label-secondary btn btn-outline-secondary videoa videopicker" data-videoone="#video2" data-videotwo="#video22">2 Video</button>
+            <button type="button" class="btn btn-label-secondary  btn btn-outline-secondary videoa videopicker " data-videoone="#video3" data-videotwo="#video33">3 Video</button>
+            <button type="button" class="btn btn-label-secondary  btn btn-outline-secondary videoa videopicker" data-videoone="#video4" data-videotwo="#video44">+4 Video</button>
+
+        </div>
+    </div>
+    </div>
+ </div>
+<!--add code-->
+
+</div>
+
+
+
+
+
+
+<hr style="width: 131px;
+  margin: auto;margin-top:20px">
+
+
+ <div style="padding:0px 2.75rem;">
+
+<div class="btn-toolbar " role="toolbar" aria-label="Toolbar with button groups">
+    <div style="width:100%;padding:10px;" class="btn-group ary" role="group" aria-label="First group">
+        <button type="button" class="btn btn-outline-secondary geo ary active" data-sharetext="#shahretext">Share Text</button>
+        <button type="button" class="btn btn-outline-secondary geo shareimage ary" data-sharetext="#shahreimage">Share Image</button>
+        <button type="button" class="btn btn-outline-secondary geo ary" data-sharetext="#shahrevideo">Share Video</button>
+
+    </div>
+
+
+</div>
+</div>
